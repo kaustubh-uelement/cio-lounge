@@ -25,7 +25,7 @@ export default function AdvisoryPage() {
         lead="Tap into the wisdom of industry veterans who know the industry inside out — an extended arm of CIO Lounge."
       >
         <ButtonLink href="/contact" variant="light" arrow>Find an advisor</ButtonLink>
-        <ButtonLink href="/membership/apply?plan=veteran" variant="outline-light">Apply to advise</ButtonLink>
+        <ButtonLink href="/membership/apply?plan=veteran" variant="outline-light">Request an invitation to advise</ButtonLink>
       </PageHero>
       <Section>
         <div className="grid gap-5 md:grid-cols-2">
@@ -58,7 +58,7 @@ export default function AdvisoryPage() {
         eyebrow="Retired from the CIO chair?"
         title="Your experience is still in demand."
         body="Join the Veteran Advisor panel and mentor the next generation of technology leaders."
-        primary={{ href: "/membership/apply?plan=veteran", label: "Apply to advise" }}
+        primary={{ href: "/membership/apply?plan=veteran", label: "Request an invitation to advise" }}
       />
     </>
   );

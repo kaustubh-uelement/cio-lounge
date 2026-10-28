@@ -4,17 +4,19 @@ export const membershipSchema = z.object({
   plan: z.enum(["member", "founding", "veteran"]),
   fullName: z.string().trim().min(2, "Please enter your full name"),
   email: z.string().trim().email("Please enter a valid work email"),
-  phone: z.string().trim().min(8, "Please enter a phone number"),
+  phone: z.string().trim().min(8, "Please enter a valid mobile number"),
   role: z.enum(["CIO", "CTO", "CISO", "CDO", "Head of IT", "Former CIO / retired"], {
-    errorMap: () => ({ message: "Please choose your role" }),
+    errorMap: () => ({ message: "Please choose your executive role" }),
   }),
-  company: z.string().trim().min(2, "Please enter your organisation"),
+  company: z.string().trim().min(2, "Please enter your enterprise / organisation name"),
   industry: z.string().trim().min(2, "Please choose an industry"),
-  city: z.string().trim().min(2, "Please enter your city"),
-  linkedin: z.string().trim().url("Please enter a full LinkedIn URL").optional().or(z.literal("")),
+  city: z.string().trim().min(2, "Please enter your city / chapter"),
+  turnover: z.string().trim().optional(),
+  linkedin: z.string().trim().optional(),
   interests: z.array(z.string()).default([]),
   referredBy: z.string().trim().optional(),
-  consent: z.literal(true, { errorMap: () => ({ message: "Please accept to continue" }) }),
+  executiveNotes: z.string().trim().max(1000).optional(),
+  consent: z.literal(true, { errorMap: () => ({ message: "Please confirm that you represent enterprise IT leadership" }) }),
 });
 export type MembershipApplication = z.infer<typeof membershipSchema>;
 

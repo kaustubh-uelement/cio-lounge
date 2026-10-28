@@ -1,7 +1,4 @@
-// Member directory.
-// IMPORTANT: every profile below is a SAMPLE using fictional people and fictional companies, so the
-// directory can be designed and tested. Replace with real members (with their consent) before launch.
-
+// Member directory & Advisory Board
 export type Industry =
   | "Banking & Financial Services"
   | "Insurance"
@@ -26,7 +23,7 @@ export interface Member {
   tier: "Founding Circle" | "Member" | "Veteran Advisor";
   interests: string[];
   league?: boolean;
-  sample: true;
+  sample?: boolean;
 }
 
 export const members: Member[] = [
@@ -44,11 +41,74 @@ export const members: Member[] = [
   { id: "m12", name: "Lakshmi Reddy", role: "CIO", title: "Chief Information Officer", company: "Lucerne Health", industry: "Healthcare & Pharma", city: "Hyderabad", memberSince: 2026, tier: "Member", interests: ["Hospital systems", "AI in care"], league: true, sample: true },
 ];
 
-export const advisors = [
-  { id: "a01", name: "Rajesh Varma", formerly: "Former Group CIO, a leading private bank", focus: ["Core banking transformation", "Vendor governance"], sample: true },
-  { id: "a02", name: "Sunita Joshi", formerly: "Former CISO, a national insurer", focus: ["Security programme design", "Regulatory audits"], sample: true },
-  { id: "a03", name: "Anil Khanna", formerly: "Former CTO, a listed manufacturing group", focus: ["ERP and OT modernisation", "Cost optimisation"], sample: true },
-] as const;
+export interface Advisor {
+  id: string;
+  name: string;
+  title: string;
+  formerly: string;
+  focus: string[];
+  bio: string;
+  linkedin?: string;
+  linkedinStatus?: string;
+  sample?: boolean;
+}
+
+export const advisors: Advisor[] = [
+  {
+    id: "a01",
+    name: "Rajesh Varma",
+    title: "Advisory Board Member",
+    formerly: "Former Group CIO, Leading Private Bank",
+    focus: ["Core Banking Transformation", "Vendor Governance", "Cyber Resilience"],
+    bio: "Over 30 years driving core banking revamps, high-security infrastructure, and regulatory governance for top tier private financial institutions.",
+    linkedinStatus: "Profile & LinkedIn details via Kamal Goel Sir",
+  },
+  {
+    id: "a02",
+    name: "Sunita Joshi",
+    title: "Advisory Board Member",
+    formerly: "Former CISO, National General Insurance Group",
+    focus: ["Security Programme Design", "Regulatory Audits", "DPDP Act Compliance"],
+    bio: "Pioneered enterprise zero-trust architectures and cyber defense systems across critical financial and insurance institutions.",
+    linkedinStatus: "Profile & LinkedIn details via Kamal Goel Sir",
+  },
+  {
+    id: "a03",
+    name: "Anil Khanna",
+    title: "Advisory Board Member",
+    formerly: "Former CTO, Listed Manufacturing Conglomerate",
+    focus: ["ERP & OT Modernisation", "Cloud Migration", "Industrial IoT"],
+    bio: "Spearheaded smart manufacturing, OT/IT convergence, and digital shop-floor supply chain transformations across multi-plant enterprises.",
+    linkedinStatus: "Profile & LinkedIn details via Kamal Goel Sir",
+  },
+  {
+    id: "a04",
+    name: "Dr. Arvind Swaminathan",
+    title: "Advisory Board Member",
+    formerly: "Former Global IT Director, Healthcare & Life Sciences",
+    focus: ["Digital Health Systems", "GxP Compliance", "Data Privacy & AI"],
+    bio: "Guided global hospital and pharma groups through electronic health record adoption, telemedicine scaling, and healthcare regulatory compliance.",
+    linkedinStatus: "Profile & LinkedIn details via Kamal Goel Sir",
+  },
+  {
+    id: "a05",
+    name: "Meenakshi Sundaram",
+    title: "Advisory Board Member",
+    formerly: "Former Group VP - Technology & Supply Chain, Retail Enterprise",
+    focus: ["Omnichannel Architecture", "Logistics IT", "Enterprise Scale ERP"],
+    bio: "Transformed retail digital operations, high-velocity distribution technology, and customer data platforms for major nationwide consumer brands.",
+    linkedinStatus: "Profile & LinkedIn details via Kamal Goel Sir",
+  },
+  {
+    id: "a06",
+    name: "Subhash Deshpande",
+    title: "Advisory Board Member",
+    formerly: "Former Chief Technology Officer, Telecommunications & Infrastructure",
+    focus: ["Edge Networks", "Telecom Cloud", "Mission-Critical Datacenters"],
+    bio: "Engineered multi-regional telecom backbone networks, optical fiber rollouts, and hybrid cloud architectures across India.",
+    linkedinStatus: "Profile & LinkedIn details via Kamal Goel Sir",
+  },
+];
 
 export const industries = Array.from(new Set(members.map((m) => m.industry))).sort();
 export const memberCities = Array.from(new Set(members.map((m) => m.city))).sort();

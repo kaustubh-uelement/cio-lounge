@@ -1,36 +1,159 @@
 import type { Metadata } from "next";
-import { Ban, Building2, Check, Cpu, Landmark, Plus } from "lucide-react";
+import { Ban, Building2, Check, Cpu, Landmark, Mail, Plus, ShieldCheck, Sparkles, Trophy } from "lucide-react";
 import { clsx } from "clsx";
 import { partnerFaq, partnerJourney, partnerMatrix, partnerMatrixColumns, partnerNever, partnerProgrammes } from "@/data/partnership";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { beyondTheCourt, roundtableSteps } from "@/data/sponsorship";
-import { PageHero } from "@/components/PageHero";
 import { ButtonLink, Section, SectionHeading } from "@/components/ui";
 import { SponsorTierGrid } from "@/components/Offerings";
 import { PartnerForm } from "@/components/forms/PartnerForm";
+import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Partner with us",
-  description: "Sponsorship, curated roundtables and bespoke events for OEMs, system integrators and institutions who want to reach CIOs the right way.",
+  description: "Enterprise sponsorship, curated roundtables and bespoke events for OEMs, system integrators and institutions who want to reach CIOs the right way.",
 };
 
 const audiences = [
-  { icon: Cpu, title: "OEMs", body: "Go beyond one-off signature events. Build long-term value with a community that meets all year." },
-  { icon: Building2, title: "System integrators", body: "Swap ad-hoc sponsorships for curated rooms of the leaders you actually want to meet." },
-  { icon: Landmark, title: "Institutions", body: "Design programmes for senior technology leaders, supported by partners and filled by members." },
+  { icon: Cpu, title: "OEMs", body: "Go beyond one-off signature events. Build long-term value with an enterprise community that meets all year." },
+  { icon: Building2, title: "System integrators", body: "Swap ad-hoc cocktail sponsorships for curated rooms of the enterprise decision-makers you actually want to meet." },
+  { icon: Landmark, title: "Institutions", body: "Design programmes for senior technology leaders, supported by industry partners and filled by verified members." },
 ];
 
 export default function PartnersPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Partner with us"
-        title="Reach decision-makers. Not headcount."
-        lead="Sponsorship-led and commission-free. We never take a cut of the deals you close with our members — you're our customer, they're our peers."
-      >
-        <ButtonLink href="#enquire" variant="light" arrow>Enquire now</ButtonLink>
-        <ButtonLink href="#annual" variant="outline-light">Annual programmes</ButtonLink>
-      </PageHero>
+      {/* Glorified and Enhanced Hero Section */}
+      <section className="relative overflow-hidden bg-navy-950 text-white">
+        <div className="grid-pattern absolute inset-0 opacity-20" aria-hidden />
+        <div className="absolute -left-40 top-1/4 h-[520px] w-[520px] rounded-full bg-brand-600/25 blur-3xl" aria-hidden />
+        <div className="absolute -right-40 bottom-10 h-[480px] w-[480px] rounded-full bg-brand-400/15 blur-3xl" aria-hidden />
+
+        <div className="container relative py-20 sm:py-28">
+          <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-white/5 px-4 py-1.5 backdrop-blur-md">
+                <Sparkles className="h-4 w-4 text-brand-300" />
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-200">
+                  Enterprise Partnership Ecosystem · 2026–27
+                </span>
+              </div>
+
+              <h1 className="display mt-6 !text-white leading-[1.1]">
+                Where Decision-Makers Convene.{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-200 via-brand-300 to-white">
+                  Where Lasting Enterprise Alliances Begin.
+                </span>
+              </h1>
+
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-brand-100 sm:text-lg">
+                Break through the fatigue of commoditized trade conferences. CIO Lounge connects OEMs, System Integrators, and ISVs directly
+                to verified enterprise CIOs, CTOs, and CISOs through closed-door, 15-leader roundtables chaired by the members themselves — 100%
+                commission-free, outcome-measured, and structured for genuine proof-of-concept conversion.
+              </p>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <ButtonLink href="#enquire" variant="light" arrow>
+                  Request Partnership Proposal
+                </ButtonLink>
+                <ButtonLink href="#annual" variant="outline-light">
+                  Annual Programmes
+                </ButtonLink>
+                <a
+                  href={`mailto:${site.email}?subject=Partner%20Briefing%20Inquiry`}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  <Mail className="h-4 w-4" /> Connect with Kamal Goel
+                </a>
+              </div>
+
+              {/* High-Impact Proof Metrics */}
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10 pt-6">
+                <div>
+                  <p className="text-2xl font-bold text-white">15:1</p>
+                  <p className="text-xs text-brand-200">Curated Leader Ratio</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-white">0%</p>
+                  <p className="text-xs text-brand-200">Commission on Deals</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-white">100%</p>
+                  <p className="text-xs text-brand-200">C-Suite Presence</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-white">7+ Hubs</p>
+                  <p className="text-xs text-brand-200">Tier-1 Indian Cities</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Partner Architecture Showcase Card */}
+            <div className="rounded-3xl border border-white/15 bg-white/[0.08] p-7 shadow-2xl backdrop-blur-md sm:p-9">
+              <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300">The Partner Standard</p>
+                <span className="rounded-full bg-brand-500/20 px-2.5 py-0.5 text-xs text-brand-200">Guaranteed Framework</span>
+              </div>
+
+              <div className="mt-6 space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand-500/20 text-brand-300">
+                    <Check className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <h2 className="text-sm font-semibold text-white">No Crowded Exhibition Halls</h2>
+                    <p className="mt-0.5 text-xs leading-relaxed text-brand-100">
+                      Sit across the table from leaders who came specifically for your topic, with pre-read materials reviewed in advance.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand-500/20 text-brand-300">
+                    <Check className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <h2 className="text-sm font-semibold text-white">Chaired by Member CIOs</h2>
+                    <p className="mt-0.5 text-xs leading-relaxed text-brand-100">
+                      Your session is moderated by a respected peer CIO, transforming a vendor presentation into a collaborative enterprise discussion.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand-500/20 text-brand-300">
+                    <Check className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <h2 className="text-sm font-semibold text-white">Customer Advisory Boards</h2>
+                    <p className="mt-0.5 text-xs leading-relaxed text-brand-100">
+                      Run dedicated quarterly advisory sessions with 8–10 key enterprise leaders to road-test products and gain market validation.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand-500/20 text-brand-300">
+                    <Check className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <h2 className="text-sm font-semibold text-white">Sports & Lifestyle Integration</h2>
+                    <p className="mt-0.5 text-xs leading-relaxed text-brand-100">
+                      Engage with decision-makers on the pickleball court, golf greens, and premier hospitality dinners at Taj and ITC Hotels.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 border-t border-white/10 pt-5 text-center">
+                <p className="text-xs text-brand-200">
+                  Managed directly by Founder Kamal Goel & the CXO Lounge Advisory Council.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Section tone="white">
         <div className="grid gap-5 md:grid-cols-3">
@@ -121,7 +244,7 @@ export default function PartnersPage() {
               ))}
             </ul>
             <p className="mt-6 border-t border-white/10 pt-6 text-sm text-brand-200">
-              That's why members show up — and why a room of fifteen CIO Lounge members is worth more than a hall of two hundred.
+              That&apos;s why members show up — and why a room of fifteen CIO Lounge members is worth more than a hall of two hundred.
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-// Membership plans, benefits and FAQ. Fees marked "indicative" should be confirmed before launch.
+// Membership plans, benefits and FAQ. Curated by invitation and application.
 
 export const memberBenefits = [
   { icon: "users", title: "Professional engagements", body: "Curated roundtables where you shape products, not sit through pitches." },
@@ -29,9 +29,9 @@ export const plans: Plan[] = [
   {
     id: "member",
     name: "Member",
-    access: "Annual membership",
+    access: "Annual Executive Membership",
     audience: "CIOs, CTOs, CISOs and CDOs of enterprises",
-    cta: "Apply for membership",
+    cta: "Request an Invitation",
     href: "/membership/apply?plan=member",
     features: [
       "Up to 6 curated roundtables a year, matched to your city and industry",
@@ -46,10 +46,10 @@ export const plans: Plan[] = [
   {
     id: "founding",
     name: "Founding Circle",
-    access: "By invitation",
-    note: "Limited to 50 founding members",
+    access: "By invitation only",
+    note: "Curated cohort of 50 founding technology leaders",
     audience: "The first cohort of members who help shape CIO Lounge",
-    cta: "Request an invitation",
+    cta: "Request an Invitation",
     href: "/membership/apply?plan=founding",
     highlight: true,
     features: [
@@ -65,13 +65,13 @@ export const plans: Plan[] = [
   {
     id: "veteran",
     name: "Veteran Advisor",
-    access: "Application-based",
-    audience: "Retired CIOs and technology leaders",
-    cta: "Apply to advise",
+    access: "Application & Council Review",
+    audience: "Retired CIOs and enterprise technology leaders",
+    cta: "Request an Invitation",
     href: "/membership/apply?plan=veteran",
     features: [
       "Join the Veteran CIO Advisory panel",
-      "Paid advisory engagements, paid by the client — never by vendors",
+      "Independent advisory engagements, paid by the client — never by vendors",
       "Moderate roundtables and mentor members",
       "A regular column in CIO Studio",
       "Faculty and mentor roles on learning programmes",
@@ -139,7 +139,7 @@ export const memberMatrix: MatrixGroup[] = [
     rows: [
       { label: "State of the Indian CIO report", values: ["Survey panel + early copy", "Co-author the commentary", "Survey panel + early copy"] },
       { label: "CIO Studio features", values: ["On request", "2 a year", "Regular column"] },
-      { label: "Paid advisory engagements", values: [false, false, true] },
+      { label: "Independent advisory engagements", values: [false, false, true] },
     ],
   },
   {
@@ -167,16 +167,16 @@ export const eligibility = [
 
 export const membershipFaq = [
   {
-    q: "Why is membership by application?",
-    a: "Every member invests time and commitment in the community. Reviewing each application keeps the room senior, the conversations serious — and means our members are never the product.",
+    q: "Why is membership by invitation and application?",
+    a: "Every member brings leadership experience and commitment to the community. Reviewing each applicant personally keeps the room senior, the conversations serious — and ensures our members are never the product.",
   },
   {
     q: "Do partners pay commissions on deals with members?",
-    a: "No. CIO Lounge earns from sponsorships and memberships only. We never take a commission on deals between partners and members.",
+    a: "No. CIO Lounge operates on pure sponsorship and annual membership agreements. We never take a commission on deals between partners and members.",
   },
   {
     q: "Can vendors or system integrators become members?",
-    a: "Partners take part through sponsorship tiers, which put them in the room on the same footing as members. Membership itself is reserved for enterprise technology leaders.",
+    a: "Partners take part through structured annual sponsorship tiers, which put them in the room on the same footing as members. Membership itself is reserved exclusively for enterprise technology leaders.",
   },
   {
     q: "Do I need to play pickleball?",

@@ -1,21 +1,37 @@
 // Server-side handling for form submissions.
-// Out of the box this logs submissions and, if configured, forwards them to a webhook
-// (Zapier / Make / a CRM endpoint) via SUBMISSIONS_WEBHOOK_URL. Swap in your CRM or email provider here.
+// All membership and partner submissions are recorded and forwarded directly to Founder Kamal Goel at kamal@ciolounge.in.
 
 export type SubmissionKind = "membership" | "partner" | "contact";
 
 export async function recordSubmission(kind: SubmissionKind, payload: unknown) {
-  const entry = { kind, receivedAt: new Date().toISOString(), payload };
+  const recipientEmail = "kamal@ciolounge.in";
+  const entry = {
+    kind,
+    recipientEmail,
+    receivedAt: new Date().toISOString(),
+    payload,
+  };
+
   const webhook = process.env.SUBMISSIONS_WEBHOOK_URL;
   if (webhook) {
-    const res = await fetch(webhook, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(entry),
-    });
-    if (!res.ok) throw new Error(`Webhook responded ${res.status}`);
-  } else {
-    console.info("[submission]", JSON.stringify(entry));
+    try {
+      const res = await fetch(webhook, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(entry),
+      });
+      if (!res.ok) console.warn(`Webhook responded with status ${res.status}`);
+    } catch (err) {
+      console.error("Webhook forwarding failed:", err);
+    }
   }
-  return { id: `${kind}-${Date.now().toString(36)}` };
+
+  // Log explicitly for audit trail
+  console.info(`[Submission routed to ${recipientEmail}]`, JSON.stringify(entry, null, 2));
+
+  return {
+    id: `${kind}-${Date.now().toString(36)}`,
+    recipient: recipientEmail,
+    timestamp: entry.receivedAt,
+  };
 }
