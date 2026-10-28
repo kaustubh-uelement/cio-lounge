@@ -8,6 +8,18 @@ import type { Member, Role } from "@/data/members";
 import { initials } from "@/lib/format";
 import { site } from "@/data/site";
 
+// SHA-256 cryptographic hash of the exclusive executive access key.
+// The plain-text key is never stored or exposed anywhere in the client bundle.
+const VAULT_KEY_HASH = "53a60b192a83ba35ac2a2d9af4820048c262888610260a8a47cd29ee55f99437";
+
+async function hashKey(text: string): Promise<string> {
+  const data = new TextEncoder().encode(text.trim());
+  const buffer = await crypto.subtle.digest("SHA-256", data);
+  return Array.from(new Uint8Array(buffer))
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
 const avatarTones = ["bg-brand-600", "bg-navy-800", "bg-brand-700", "bg-navy-700", "bg-brand-500"];
 
 export function MemberCard({ m, index = 0, blurred = false }: { m: Member; index?: number; blurred?: boolean }) {
@@ -69,14 +81,22 @@ export function MembersDirectory({
   const [city, setCity] = useState("all");
   const [league, setLeague] = useState(false);
 
-  const handleUnlock = (e: React.FormEvent) => {
+  const handleUnlock = async (e: React.FormEvent) => {
     e.preventDefault();
-    const normalized = passcode.trim().toUpperCase();
-    if (normalized === "CIOLOUNGE" || normalized === "CIO2026" || normalized === "KAMAL" || normalized === "MEMBER") {
-      setIsLocked(false);
-      setPasscodeError("");
-    } else {
-      setPasscodeError("Invalid access key. Please check with Kamal Goel or try 'CIOLOUNGE'.");
+    if (!passcode.trim()) {
+      setPasscodeError("Please enter your member access key.");
+      return;
+    }
+    try {
+      const hashed = await hashKey(passcode);
+      if (hashed === VAULT_KEY_HASH) {
+        setIsLocked(false);
+        setPasscodeError("");
+      } else {
+        setPasscodeError("Invalid access key. Please verify credentials with Kamal Goel.");
+      }
+    } catch {
+      setPasscodeError("Verification error. Please try again.");
     }
   };
 
@@ -153,9 +173,9 @@ export function MembersDirectory({
                   <p className="mt-2.5 text-left text-xs font-medium text-red-300">{passcodeError}</p>
                 ) : (
                   <div className="mt-2.5 flex items-center justify-between text-[11px] text-brand-200/60 px-1">
-                    <span>Demo Key: <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-brand-200">CIOLOUNGE</code></span>
+                    <span>Authorized credential verification</span>
                     <a href={`mailto:${site.email}?subject=Member%20Directory%20Access%20Key%20Inquiry`} className="hover:text-white transition underline underline-offset-2">
-                      Request credentials
+                      Request access credentials
                     </a>
                   </div>
                 )}
