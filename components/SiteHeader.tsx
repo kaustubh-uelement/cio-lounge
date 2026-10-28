@@ -40,17 +40,23 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
+              title={"locked" in item && item.locked ? "Members Directory · Restricted Access" : undefined}
               className={clsx(
-                "inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm transition",
+                "group relative inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-sm transition",
                 isActive(item.href) ? "bg-brand-50 font-medium text-brand-700" : "text-ink hover:text-navy-900",
               )}
             >
               <span>{item.label}</span>
               {"locked" in item && item.locked && (
-                <span className="inline-flex items-center gap-1 rounded bg-navy-100 px-1.5 py-0.5 text-[10px] font-semibold text-navy-800">
-                  <Lock className="h-2.5 w-2.5" />
-                  Locked
-                </span>
+                <Lock
+                  className={clsx(
+                    "h-3 w-3 transition-all duration-200",
+                    isActive(item.href)
+                      ? "text-brand-600"
+                      : "text-ink-muted/70 group-hover:scale-110 group-hover:text-brand-600",
+                  )}
+                  aria-label="Restricted access"
+                />
               )}
             </Link>
           ))}
@@ -87,13 +93,12 @@ export function SiteHeader() {
                     isActive(item.href) ? "bg-brand-50 font-medium text-brand-700" : "text-navy-900",
                   )}
                 >
-                  <span>{item.label}</span>
-                  {"locked" in item && item.locked && (
-                    <span className="inline-flex items-center gap-1 rounded bg-navy-100 px-2 py-0.5 text-xs font-semibold text-navy-800">
-                      <Lock className="h-3 w-3" />
-                      Locked
-                    </span>
-                  )}
+                  <span className="inline-flex items-center gap-2">
+                    {item.label}
+                    {"locked" in item && item.locked && (
+                      <Lock className="h-4 w-4 text-ink-muted" aria-label="Restricted access" />
+                    )}
+                  </span>
                 </Link>
               ),
             )}
