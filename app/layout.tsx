@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: "CIO Lounge — A premium platform for IT leaders", template: "%s · CIO Lounge" },
   description: site.description,
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "CIO Lounge — A premium platform for IT leaders",
     description: site.description,
