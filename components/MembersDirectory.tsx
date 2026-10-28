@@ -158,7 +158,8 @@ export function MembersDirectory({
                       setPasscode(e.target.value);
                       setPasscodeError("");
                     }}
-                    className="w-full bg-transparent px-3 py-2 text-sm text-white placeholder-brand-200/50 outline-none"
+                    style={{ outline: "none", boxShadow: "none" }}
+                    className="w-full border-none bg-transparent px-3 py-2 text-sm text-white placeholder-brand-200/50 outline-none ring-0 focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
                   />
                   <button
                     type="submit"
