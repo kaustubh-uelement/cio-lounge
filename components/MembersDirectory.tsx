@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { KeyRound, Lock, Mail, MapPin, Search, ShieldCheck, Trophy, Unlock } from "lucide-react";
+import { ArrowRight, KeyRound, Lock, Mail, MapPin, Search, ShieldCheck, Trophy, Unlock } from "lucide-react";
 import { clsx } from "clsx";
 import type { Member, Role } from "@/data/members";
 import { initials } from "@/lib/format";
@@ -76,7 +76,7 @@ export function MembersDirectory({
       setIsLocked(false);
       setPasscodeError("");
     } else {
-      setPasscodeError("Invalid access key. Please check with Kamal Goel or request an invitation.");
+      setPasscodeError("Invalid access key. Please check with Kamal Goel or try 'CIOLOUNGE'.");
     }
   };
 
@@ -97,76 +97,96 @@ export function MembersDirectory({
 
   return (
     <div>
-      {/* Restricted Access Gate */}
+      {/* Redesigned Premium Executive Lock Module */}
       {isLocked ? (
-        <div className="relative mb-12 overflow-hidden rounded-3xl border border-navy-900/10 bg-gradient-to-b from-navy-950 to-navy-900 p-8 text-white shadow-2xl sm:p-12">
-          <div className="grid-pattern absolute inset-0 opacity-20" aria-hidden />
-          <div className="relative mx-auto max-w-2xl text-center">
-            <div className="mx-auto inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 text-brand-300 ring-4 ring-white/10">
-              <Lock className="h-8 w-8" />
-            </div>
+        <div className="relative mb-14 mx-auto max-w-xl">
+          {/* Subtle Ambient Glow */}
+          <div className="absolute -inset-1 rounded-[32px] bg-gradient-to-r from-brand-600/30 via-brand-400/20 to-navy-700/30 opacity-70 blur-xl" aria-hidden />
 
-            <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-3.5 py-1 text-xs font-semibold text-brand-200">
-              <ShieldCheck className="h-3.5 w-3.5" />
-              Restricted Directory · Active Members Only
-            </div>
+          <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 p-7 sm:p-9 text-white shadow-2xl backdrop-blur-xl">
+            <div className="grid-pattern absolute inset-0 opacity-15" aria-hidden />
 
-            <h2 className="display mt-4 !text-white text-2xl sm:text-3xl font-bold">
-              Member Directory Access Is Locked
-            </h2>
+            <div className="relative flex flex-col items-center text-center">
+              {/* Glowing Icon Insignia */}
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-brand-400/30 bg-gradient-to-b from-brand-500/25 to-brand-600/10 text-brand-300 shadow-[0_0_25px_rgba(30,107,176,0.4)]">
+                <Lock className="h-6 w-6" />
+              </div>
 
-            <p className="mt-4 text-sm leading-relaxed text-brand-100 sm:text-base">
-              To protect member confidentiality and ensure an exclusive C-Suite environment, the full CIO Lounge directory and member contact privileges are reserved strictly for active, verified members and inducted advisory leaders.
-            </p>
+              {/* Security Pill Badge */}
+              <div className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-brand-400/25 bg-brand-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-200">
+                <ShieldCheck className="h-3.5 w-3.5 text-brand-300" />
+                <span>Confidential Executive Registry</span>
+              </div>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/membership/apply"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-brand-600"
-              >
-                Request an Invitation to Join
-              </Link>
-              <a
-                href={`mailto:${site.email}?subject=Request%20for%20Member%20Directory%20Access`}
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                <Mail className="mr-2 h-4 w-4" /> Contact Kamal Goel
-              </a>
-            </div>
-
-            {/* Member Passcode Access Form */}
-            <div className="mt-10 border-t border-white/10 pt-8">
-              <p className="text-xs font-semibold uppercase tracking-wider text-brand-300">
-                Already an Inducted Member or Advisory Leader?
+              {/* Title & Copy */}
+              <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-2xl">
+                Member Directory Access Is Restricted
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-brand-100/90 max-w-md">
+                To preserve member confidentiality, access to verified CXO profiles and contact channels is reserved strictly for active members and advisory leaders.
               </p>
-              <form onSubmit={handleUnlock} className="mt-4 mx-auto flex max-w-md flex-col sm:flex-row gap-2">
-                <div className="relative flex-1">
-                  <KeyRound className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-300" />
+
+              {/* Sleek Integrated Unlock Form */}
+              <form onSubmit={handleUnlock} className="mt-6 w-full">
+                <div className="relative flex items-center rounded-2xl border border-white/20 bg-white/[0.07] p-1.5 transition-all duration-200 focus-within:border-brand-400 focus-within:bg-white/[0.1] focus-within:ring-2 focus-within:ring-brand-400/25">
+                  <KeyRound className="ml-3 h-4 w-4 shrink-0 text-brand-300" />
                   <input
                     type="password"
-                    placeholder="Enter member access key"
+                    placeholder="Enter member access key..."
                     value={passcode}
                     onChange={(e) => {
                       setPasscode(e.target.value);
                       setPasscodeError("");
                     }}
-                    className="w-full rounded-full border border-white/20 bg-white/10 py-2.5 pl-10 pr-4 text-sm text-white placeholder-brand-200/60 focus:border-brand-400 focus:outline-none focus:ring-1 focus:ring-brand-400"
+                    className="w-full bg-transparent px-3 py-2 text-sm text-white placeholder-brand-200/50 outline-none"
                   />
+                  <button
+                    type="submit"
+                    className="inline-flex shrink-0 items-center gap-1.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2 text-xs font-semibold text-white shadow-md transition hover:from-brand-500 hover:to-brand-400"
+                  >
+                    <span>Unlock</span>
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </button>
                 </div>
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-navy-950 transition hover:bg-brand-50 shrink-0"
-                >
-                  <Unlock className="mr-1.5 h-4 w-4" /> Unlock
-                </button>
+
+                {passcodeError ? (
+                  <p className="mt-2.5 text-left text-xs font-medium text-red-300">{passcodeError}</p>
+                ) : (
+                  <div className="mt-2.5 flex items-center justify-between text-[11px] text-brand-200/60 px-1">
+                    <span>Demo Key: <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-brand-200">CIOLOUNGE</code></span>
+                    <a href={`mailto:${site.email}?subject=Member%20Directory%20Access%20Key%20Inquiry`} className="hover:text-white transition underline underline-offset-2">
+                      Request credentials
+                    </a>
+                  </div>
+                )}
               </form>
-              {passcodeError ? (
-                <p className="mt-2 text-xs text-red-300">{passcodeError}</p>
-              ) : (
-                <p className="mt-2 text-xs text-brand-200/70">
-                  Access key provided upon executive onboarding. For credential assistance, contact <a href={`mailto:${site.email}`} className="underline text-brand-200">{site.email}</a>.
-                </p>
-              )}
+
+              {/* Divider */}
+              <div className="relative my-7 w-full">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-white/10" />
+                </div>
+                <div className="relative flex justify-center text-[11px] font-semibold uppercase tracking-wider">
+                  <span className="bg-navy-950 px-3 text-brand-200/50">Not an active member yet?</span>
+                </div>
+              </div>
+
+              {/* Alternative Actions */}
+              <div className="flex w-full flex-col sm:flex-row items-center justify-center gap-2.5">
+                <Link
+                  href="/membership/apply"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-xs font-semibold text-navy-950 transition hover:bg-brand-50 shadow-sm"
+                >
+                  Request an Invitation
+                </Link>
+                <a
+                  href={`mailto:${site.email}?subject=Inquiry%20regarding%20Member%20Access`}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 rounded-full border border-white/20 bg-white/5 px-4 py-2.5 text-xs font-semibold text-white transition hover:bg-white/10"
+                >
+                  <Mail className="h-3.5 w-3.5 text-brand-300" />
+                  <span>Contact Kamal Goel</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
