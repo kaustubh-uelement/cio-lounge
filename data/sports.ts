@@ -19,7 +19,7 @@ export const sportsProperties: SportProperty[] = [
     short: "Pickleball League",
     tagline: "India Tour",
     summary:
-      "India's first multi-city pickleball championship for technology leaders — eight teams of eight in every city, and a National Grand Finale.",
+      "India's first multi-city pickleball championship for technology leaders: eight teams of eight in every city, and a National Grand Finale.",
     status: "Mumbai League · first week of November 2026",
     href: "/pickleball-league",
     facts: [
@@ -34,7 +34,7 @@ export const sportsProperties: SportProperty[] = [
     short: "Golf Tour",
     tagline: "Season 2026–27",
     summary:
-      "Morning rounds across India's golf cities, with handicap flights for experienced golfers and a clinic for new ones — then the Tour Championship.",
+      "Morning rounds across India's golf cities, with handicap flights for experienced golfers and a clinic for new ones, followed by the Tour Championship.",
     status: "Mumbai leg · winter 2026–27",
     href: "/golf-tour",
     facts: [
@@ -49,7 +49,7 @@ export const sportsProperties: SportProperty[] = [
     short: "Premier League",
     tagline: "Season 1",
     summary:
-      "T10 franchise cricket for technology leaders — eight teams owned by partner companies, a Draft Night, and a floodlit final.",
+      "T10 franchise cricket for technology leaders: eight teams owned by partner companies, a Draft Night, and a floodlit final.",
     status: "Season 1 · early 2027",
     href: "/premier-league",
     facts: [

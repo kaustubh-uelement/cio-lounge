@@ -15,19 +15,19 @@ export default function GolfTourPage() {
       eyebrow="CIO Lounge presents"
       title="CIO Golf Tour"
       accent="Season 2026–27"
-      lead="A season of morning rounds for India's technology leaders — four city legs, a flight for every level of golfer, and a Tour Championship."
+      lead="A season of morning rounds for India's technology leaders: four city legs, a flight for every level of golfer, and a Tour Championship."
       about={{
         heading: "Four hours on the course, with the right people",
         points: [
           "A multi-city golf series exclusively for CIOs, CTOs and CISOs.",
           "Handicap golfers play an 18-hole Stableford; new golfers join a coaching clinic and a 9-hole scramble.",
           "Every leg ends with a prize-giving lunch, and points from every leg count towards the Tour Championship.",
-          "The top layer only — the same standard as every CIO Lounge property.",
+          "The top layer only, maintaining the same standard as every CIO Lounge property.",
         ],
       }}
       why={{
         heading: "The sport of the long conversation",
-        body: "Golf gives leaders four uninterrupted hours together — no slides, no agenda, and a shared scorecard at the end.",
+        body: "Golf gives leaders four uninterrupted hours together: no slides, no agenda, and a shared scorecard at the end.",
         points: ["No handicap needed to join", "Played at any age", "Early mornings, back by lunch", "Built for real conversation"],
       }}
       format={{

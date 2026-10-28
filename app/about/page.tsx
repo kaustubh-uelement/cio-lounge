@@ -10,7 +10,7 @@ import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "CXO Lounge & CIO Lounge — an executive ecosystem built by a CIO for technology leaders, governed by peers, and committed to innovate, influence and impact.",
+  description: "CXO Lounge & CIO Lounge: an executive ecosystem built by a CIO for technology leaders, governed by peers, and committed to innovate, influence and impact.",
 };
 
 export default function AboutPage() {
@@ -65,7 +65,7 @@ export default function AboutPage() {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 shrink-0 text-brand-600 mt-0.5" />
-                <span><strong>Zero Vendor Commissions:</strong> We earn purely through annual memberships and structured sponsorships — never taking a cut from member deals.</span>
+                <span><strong>Zero Vendor Commissions:</strong> We earn purely through annual memberships and structured sponsorships, never taking a cut from member deals.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 shrink-0 text-brand-600 mt-0.5" />
@@ -167,8 +167,8 @@ export default function AboutPage() {
                   and destination galas.
                 </p>
                 <p>
-                  Shikha directs the platform&apos;s hallmark sporting ecosystems — the <strong>CIO Pickleball League</strong>,{" "}
-                  <strong>CIO Golf Tour</strong>, and <strong>CIO Premier League</strong> — ensuring that technology leaders and their families
+                  Shikha directs the platform&apos;s hallmark sporting ecosystems: the <strong>CIO Pickleball League</strong>,{" "}
+                  <strong>CIO Golf Tour</strong>, and <strong>CIO Premier League</strong>, ensuring that technology leaders and their families
                   experience exceptional camaraderie, wellness, and lifestyle privileges.
                 </p>
               </div>

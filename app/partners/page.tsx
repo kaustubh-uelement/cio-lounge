@@ -48,7 +48,7 @@ export default function PartnersPage() {
 
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-brand-100 sm:text-lg">
                 Break through the fatigue of commoditized trade conferences. CIO Lounge connects OEMs, System Integrators, and ISVs directly
-                to verified enterprise CIOs, CTOs, and CISOs through closed-door, 15-leader roundtables chaired by the members themselves — 100%
+                to verified enterprise CIOs, CTOs, and CISOs through closed-door, 15-leader roundtables chaired by the members themselves: 100%
                 commission-free, outcome-measured, and structured for genuine proof-of-concept conversion.
               </p>
 
@@ -171,7 +171,7 @@ export default function PartnersPage() {
         <SectionHeading
           eyebrow="Annual partnership programmes"
           title="What a partner company gets for the year"
-          lead="A year-round programme of curated access, advisory boards and insight — with league rights included, so you don't pay twice."
+          lead="A year-round programme of curated access, advisory boards and insight, with league rights included, so you don't pay twice."
         />
         <div className="grid gap-6 lg:grid-cols-3">
           {partnerProgrammes.map((p) => (
@@ -244,7 +244,7 @@ export default function PartnersPage() {
               ))}
             </ul>
             <p className="mt-6 border-t border-white/10 pt-6 text-sm text-brand-200">
-              That&apos;s why members show up — and why a room of fifteen CIO Lounge members is worth more than a hall of two hundred.
+              That&apos;s why members show up, and why a room of fifteen CIO Lounge members is worth more than a hall of two hundred.
             </p>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function PartnersPage() {
         <SectionHeading
           eyebrow="Professional engagements"
           title="Curated roundtables that turn into proofs of concept"
-          lead="It stops being your product and becomes the CIOs' product. That sense of belonging is what converts — and one successful POC builds credibility across the whole community."
+          lead="It stops being your product and becomes the CIOs' product. That sense of belonging is what converts, and one successful POC builds credibility across the whole community."
         />
         <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {roundtableSteps.map((s, i) => (

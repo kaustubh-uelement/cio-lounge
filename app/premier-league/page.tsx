@@ -5,7 +5,7 @@ import { PropertyPage } from "@/components/PropertyPage";
 
 export const metadata: Metadata = {
   title: "CIO Premier League",
-  description: "T10 franchise cricket for technology leaders — eight teams owned by partner companies, a Draft Night and a floodlit final.",
+  description: "T10 franchise cricket for technology leaders: eight teams owned by partner companies, a Draft Night and a floodlit final.",
 };
 
 export default function PremierLeaguePage() {
@@ -15,7 +15,7 @@ export default function PremierLeaguePage() {
       eyebrow="CIO Lounge presents"
       title="CIO Premier League"
       accent="Season 1"
-      lead="T10 franchise cricket for India's technology leaders — eight teams, a Draft Night, two weekends of matches and a floodlit final."
+      lead="T10 franchise cricket for India's technology leaders: eight teams, a Draft Night, two weekends of matches and a floodlit final."
       about={{
         heading: "Franchise cricket, built for the CIO community",
         points: [
@@ -28,7 +28,7 @@ export default function PremierLeaguePage() {
       why={{
         heading: "India's game, at team scale",
         body: "Cricket is the one sport almost every technology leader has played. Twelve-player squads build real team bonds over a season.",
-        points: ["Ten overs a side — short matches", "Every squad mixes companies and industries", "Partners play alongside members", "Families in the stands"],
+        points: ["Ten overs a side: short matches", "Every squad mixes companies and industries", "Partners play alongside members", "Families in the stands"],
       }}
       format={{
         heading: "From Draft Night to the final",

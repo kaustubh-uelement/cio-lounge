@@ -29,7 +29,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { initials } from "@/lib/format";
 
 const atAGlance = [
-  { term: "Who it's for", detail: "CIOs, CTOs, CISOs and CDOs of enterprises — the top layer only." },
+  { term: "Who it's for", detail: "CIOs, CTOs, CISOs and CDOs of enterprises: the top layer only." },
   { term: "What we do", detail: "Curated roundtables, learning with top institutions, veteran advisory, sport and lifestyle." },
   { term: "Where", detail: "Mumbai first, then Delhi NCR, Bengaluru, Hyderabad, Chennai, Ahmedabad and Pune." },
   { term: "How we work", detail: "Members join by application & invitation. Partners join by programme. Nobody pays a commission." },
@@ -86,7 +86,7 @@ const programmes = [
   { icon: Users, title: "Professional engagements", body: "Curated roundtables and CXO breakfasts, chaired by members.", href: "/partners" },
   { icon: GraduationCap, title: "Learning", body: "Residential programmes designed with top institutions.", href: "/learning" },
   { icon: ShieldCheck, title: "Veteran CIO Advisory", body: "Independent counsel from retired CIOs, never vendor-paid.", href: "/advisory" },
-  { icon: Trophy, title: "Sports and lifestyle", body: "Pickleball, golf and cricket — with families welcome.", href: "/sports" },
+  { icon: Trophy, title: "Sports and lifestyle", body: "Pickleball, golf and cricket, with families welcome.", href: "/sports" },
   { icon: Mic, title: "CIO Studio", body: "Perspectives and conversations from the community.", href: "/studio" },
   { icon: HeartHandshake, title: "CIO Foundation", body: "2% of CIO-vertical revenue supports leaders' families.", href: "/foundation" },
 ];
@@ -121,7 +121,7 @@ export default function HomePage() {
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-brand-100 sm:text-lg">
               CIO Lounge is India&apos;s premier executive ecosystem built exclusively for CIOs, CTOs, CISOs, and CDOs. We unite enterprise
               decision-makers through curated closed-door roundtables, executive masterclasses with top institutions, veteran advisory, and
-              signature sports properties — creating authentic, peer-driven collaboration without vendor noise or sales pitches.
+              signature sports properties, creating authentic, peer-driven collaboration without vendor noise or sales pitches.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -181,7 +181,7 @@ export default function HomePage() {
           <div className="space-y-4 text-[17px] leading-relaxed">
             <p>
               CXO Lounge brings together technology, people, ideas, enterprises and opportunities. Its first community, CIO Lounge, exists to
-              create meaningful connections among CIOs — and between CIOs and the partners who serve them.
+              create meaningful connections among CIOs, and between CIOs and the partners who serve them.
             </p>
             <p>
               It was founded by a CIO who has sat on both sides of the table. Partners are our customers; CIOs are our peers. The two roles
@@ -327,7 +327,7 @@ export default function HomePage() {
 
       {/* 6. What we do - Untouched as requested */}
       <Section>
-        <SectionHeading eyebrow="What we do" title="Programmes across the year" lead="Professional, personal and family — delivered city by city." />
+        <SectionHeading eyebrow="What we do" title="Programmes across the year" lead="Professional, personal and family, delivered city by city." />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {programmes.map((p) => (
             <Link key={p.title} href={p.href} className="card group flex gap-4 p-6 transition hover:border-brand-300 hover:shadow-lift">
@@ -377,7 +377,7 @@ export default function HomePage() {
             <p className="eyebrow">Our Principles</p>
             <h2 className="h2 mt-3">How CXO Lounge Is Different</h2>
             <p className="mt-3 text-ink-muted leading-relaxed">
-              Founded on the belief that technology leadership requires a trusted sanctuary of peers — free of commissions, sales pressures, and fleeting gimmicks.
+              Founded on the belief that technology leadership requires a trusted sanctuary of peers: free of commissions, sales pressures, and fleeting gimmicks.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {principles.map((p) => (

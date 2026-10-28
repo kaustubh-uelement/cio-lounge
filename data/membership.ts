@@ -55,7 +55,7 @@ export const plans: Plan[] = [
     features: [
       "Everything in Member, with roundtables by fit rather than a cap",
       "A seat on your city steering group, which sets the agenda",
-      "Peer Forum included — a monthly confidential group of 8–10",
+      "Peer Forum included: a monthly confidential group of 8–10",
       "Hosted place at the National Grand Finale",
       "Board-readiness programme included",
       "Co-author the State of the Indian CIO commentary",
@@ -71,7 +71,7 @@ export const plans: Plan[] = [
     href: "/membership/apply?plan=veteran",
     features: [
       "Join the Veteran CIO Advisory panel",
-      "Independent advisory engagements, paid by the client — never by vendors",
+      "Independent advisory engagements, paid by the client, never by vendors",
       "Moderate roundtables and mentor members",
       "A regular column in CIO Studio",
       "Faculty and mentor roles on learning programmes",
@@ -80,7 +80,7 @@ export const plans: Plan[] = [
   },
 ];
 
-/** "Your year as a member" — headline entitlements of the Member plan. */
+/** "Your year as a member": headline entitlements of the Member plan. */
 export const memberYear = [
   { value: "6", label: "curated roundtables" },
   { value: "4", label: "member evenings" },
@@ -155,12 +155,12 @@ export const memberMatrix: MatrixGroup[] = [
 
 export const peerForum = {
   title: "Peer Forum",
-  body: "A confidential group of 8–10 members from non-competing organisations who meet monthly with a trained facilitator. Bring a live decision — a vendor exit, a restructure, a board question — and leave with the view of peers who have faced it.",
+  body: "A confidential group of 8–10 members from non-competing organisations who meet monthly with a trained facilitator. Bring a live decision (such as a vendor exit, a restructure, or a board question) and leave with the view of peers who have faced it.",
   points: ["Monthly, 3 hours, in your city", "Chatham House rules", "Groups matched by company size, not industry, to avoid conflicts", "Included in Founding Circle; an add-on for Members"],
 };
 
 export const eligibility = [
-  "You lead technology for an enterprise — CIO, CTO, CISO, CDO or head of IT.",
+  "You lead technology for an enterprise: CIO, CTO, CISO, CDO or head of IT.",
   "CIO Lounge is for the top layer only, not one level below.",
   "Vendors, OEMs and system integrators join as partners, not members.",
 ];
@@ -168,7 +168,7 @@ export const eligibility = [
 export const membershipFaq = [
   {
     q: "Why is membership by invitation and application?",
-    a: "Every member brings leadership experience and commitment to the community. Reviewing each applicant personally keeps the room senior, the conversations serious — and ensures our members are never the product.",
+    a: "Every member brings leadership experience and commitment to the community. Reviewing each applicant personally keeps the room senior, the conversations serious, and ensures our members are never the product.",
   },
   {
     q: "Do partners pay commissions on deals with members?",
@@ -180,7 +180,7 @@ export const membershipFaq = [
   },
   {
     q: "Do I need to play pickleball?",
-    a: "No. The league is one part of the platform. Many members join for roundtables, learning and advisory — though pickleball is easy to learn if you want to try.",
+    a: "No. The league is one part of the platform. Many members join for roundtables, learning and advisory, though pickleball is easy to learn if you want to try.",
   },
   {
     q: "What happens to my data?",

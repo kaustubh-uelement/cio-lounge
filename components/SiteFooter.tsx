@@ -12,7 +12,7 @@ export function SiteFooter() {
           <div className="max-w-sm">
             <Logo tone="light" />
             <p className="mt-6 text-sm leading-relaxed text-brand-200">
-              A premium platform for IT leaders and the entire technology ecosystem. Built by a CIO, for CIOs — and for the partners who
+              A premium platform for IT leaders and the entire technology ecosystem. Built by a CIO, for CIOs, and for the partners who
               want to reach them the right way.
             </p>
             <ul className="mt-6 space-y-2.5 text-sm text-brand-200">

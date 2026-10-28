@@ -11,7 +11,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Membership",
-  description: "CIO Lounge membership for CIOs, CTOs, CISOs and CDOs — curated plans, executive privileges, eligibility, and how to request an invitation.",
+  description: "CIO Lounge membership for CIOs, CTOs, CISOs and CDOs: curated plans, executive privileges, eligibility, and how to request an invitation.",
 };
 
 export default function MembershipPage() {
@@ -20,7 +20,7 @@ export default function MembershipPage() {
       <PageHero
         eyebrow="Executive Membership"
         title="Excellence by Invitation. Governed by Peers."
-        lead="CIO Lounge is curated strictly for enterprise technology leaders. Every member is vetted through peer admissions — ensuring senior rooms, authentic discussions, and zero vendor solicitation."
+        lead="CIO Lounge is curated strictly for enterprise technology leaders. Every member is vetted through peer admissions, ensuring senior rooms, authentic discussions, and zero vendor solicitation."
       >
         <ButtonLink href="/membership/apply" variant="light" arrow>
           Request an Invitation
@@ -106,7 +106,7 @@ export default function MembershipPage() {
         <SectionHeading
           eyebrow="Member Privileges"
           title="Professional, Personal and Family"
-          lead="Comprehensive privileges roll out across the year — professional roundtables, executive education and sports properties take priority."
+          lead="Comprehensive privileges roll out across the year: professional roundtables, executive education and sports properties take priority."
         />
         <BenefitsGrid />
       </Section>

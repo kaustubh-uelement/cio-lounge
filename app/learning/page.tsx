@@ -27,7 +27,7 @@ export default function LearningPage() {
             <SectionHeading eyebrow="The model" title="How a programme works" />
             <div className="grid gap-4 sm:grid-cols-3">
               {[
-                ["40", "leaders per cohort — CIOs, CISOs and CTOs"],
+                ["40", "leaders per cohort: CIOs, CISOs and CTOs"],
                 ["2–3 days", "residential, on campus with faculty"],
                 ["1", "programme partner who shapes the brief"],
               ].map(([v, l]) => (

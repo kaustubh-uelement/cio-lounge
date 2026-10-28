@@ -4,7 +4,7 @@ export const site = {
   brand: "CIO Lounge",
   tagline: "Innovate | Influence | Impact",
   description:
-    "CIO Lounge is India's premier executive platform for CIOs, CTOs, CISOs, CDOs and the technology ecosystem — curated roundtables, learning with top institutions, veteran CIO advisory and premier sports properties for IT leaders.",
+    "CIO Lounge is India's premier executive platform for CIOs, CTOs, CISOs, CDOs and the technology ecosystem: curated roundtables, learning with top institutions, veteran CIO advisory and premier sports properties for IT leaders.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ciolounge.in",
   email: "kamal@ciolounge.in",
   phone: "+91 98200 00000",
@@ -14,7 +14,7 @@ export const site = {
     name: "Kamal Goel",
     role: "Founder & Managing Director",
     title: "Founder, CXO Lounge & CIO Lounge",
-    bio: "Enterprise technology leader with over 28 years of distinguished track record as Group CIO and Head of IT across leading organisations including Yotta Infrastructure, Hitachi Systems India, 63 Moons Technologies, and Anand Rathi Securities. A recognized pioneer in cloud infrastructure, cybersecurity governance, mission-critical systems, and digital strategy. Kamal founded CIO Lounge to build an authentic, peer-led sanctuary for technology leaders — connecting CIOs with peers and partners with mutual respect, trust, and lasting impact.",
+    bio: "Enterprise technology leader with over 28 years of distinguished track record as Group CIO and Head of IT across leading organisations including Yotta Infrastructure, Hitachi Systems India, 63 Moons Technologies, and Anand Rathi Securities. A recognized pioneer in cloud infrastructure, cybersecurity governance, mission-critical systems, and digital strategy. Kamal founded CIO Lounge to build an authentic, peer-led sanctuary for technology leaders, connecting CIOs with peers and partners with mutual respect, trust, and lasting impact.",
     experience: ["Yotta Infrastructure", "Hitachi Systems", "63 Moons Technologies", "Anand Rathi Securities", "28+ Yrs Enterprise IT"],
     email: "kamal@ciolounge.in",
   },
@@ -73,7 +73,7 @@ export const principles = [
   },
   {
     title: "No commissions, ever",
-    body: "We earn from structured sponsorships and annual memberships — never from the deals partners close with our members. Our neutrality is sacred.",
+    body: "We earn from structured sponsorships and annual memberships, never from the deals partners close with our members. Our neutrality is sacred.",
   },
   {
     title: "Exclusivity by invitation & merit",
@@ -97,7 +97,7 @@ export const platforms = [
     key: "studio",
     name: "CIO Studio",
     kicker: "Where CIOs speak. Technology connects.",
-    body: "The voice of the community — perspectives, conversations and case notes from the people who run India's technology.",
+    body: "The voice of the community: perspectives, conversations and case notes from the people who run India's technology.",
     href: "/studio",
   },
   {
@@ -117,7 +117,7 @@ export const marketProblem = [
   },
   {
     value: "2 a month",
-    label: "events many CIOs attend — often feeling like passive audiences to product sales pitches rather than collaborative problem-solvers",
+    label: "events many CIOs attend, often feeling like passive audiences to product sales pitches rather than collaborative problem-solvers",
     subtext: "Executive Fatigue",
   },
   {

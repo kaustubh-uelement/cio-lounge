@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Request an Invitation",
-  description: "Request an executive invitation to join CIO Lounge — for enterprise CIOs, CTOs, CISOs, CDOs and veteran technology leaders.",
+  description: "Request an executive invitation to join CIO Lounge: for enterprise CIOs, CTOs, CISOs, CDOs and veteran technology leaders.",
 };
 
 export default function ApplyPage() {

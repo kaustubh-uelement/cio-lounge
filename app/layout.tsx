@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: "CIO Lounge — A premium platform for IT leaders", template: "%s · CIO Lounge" },
+  title: { default: "CIO Lounge | A premium platform for IT leaders", template: "%s · CIO Lounge" },
   description: site.description,
   icons: {
     icon: "/favicon.png",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "CIO Lounge — A premium platform for IT leaders",
+    title: "CIO Lounge | A premium platform for IT leaders",
     description: site.description,
     siteName: "CIO Lounge",
     type: "website",

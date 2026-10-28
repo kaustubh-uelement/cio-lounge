@@ -10,7 +10,7 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Members (Restricted)",
-  description: "The CIO Lounge member directory — restricted access for verified enterprise CIOs, CTOs, CISOs and CDOs.",
+  description: "The CIO Lounge member directory: restricted access for verified enterprise CIOs, CTOs, CISOs and CDOs.",
 };
 
 export default function MembersPage() {
@@ -59,7 +59,7 @@ export default function MembersPage() {
         <SectionHeading
           eyebrow="Veteran CIO Advisory"
           title="Advisory Council"
-          lead="Distinguished former Group CIOs and CISOs who advise enterprises and mentor sitting members — never commissioned by vendors."
+          lead="Distinguished former Group CIOs and CISOs who advise enterprises and mentor sitting members, never commissioned by vendors."
           action={<ButtonLink href="/advisory" variant="secondary" arrow>About the Advisory</ButtonLink>}
         />
         <div className="grid gap-6 md:grid-cols-3">

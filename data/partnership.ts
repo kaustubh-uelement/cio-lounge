@@ -1,4 +1,4 @@
-// Annual corporate partnership programmes — year-round access, separate from per-city league sponsorship.
+// Annual corporate partnership programmes: year-round access, separate from per-city league sponsorship.
 // Entitlements are PROPOSED for the 2026–27 programme year; confirm with CXO Lounge before launch.
 import type { MatrixGroup } from "./membership";
 
@@ -43,7 +43,7 @@ export const partnerProgrammes: PartnerProgramme[] = [
     ],
     includes: [
       "4 curated roundtables and 2 CXO breakfasts a year",
-      "Your customer advisory board, recruited and run by us — 2 sessions a year with 8–10 members",
+      "Your customer advisory board, recruited and run by us: 2 sessions a year with 8–10 members",
       "2 questions in the State of the Indian CIO survey, plus a findings briefing",
       "Team Partner rights at the league in two cities",
       "6 pre-scheduled, opt-in 1:1 meetings at the National Grand Finale",
@@ -54,7 +54,7 @@ export const partnerProgrammes: PartnerProgramme[] = [
   {
     id: "principal",
     name: "Principal Partner",
-    forWhom: "One partner per category — cloud, cybersecurity, data and AI, networks and more",
+    forWhom: "One partner per category: cloud, cybersecurity, data and AI, networks and more",
     headline: [
       { value: "8", label: "curated roundtables" },
       { value: "4", label: "advisory board sessions" },
@@ -121,7 +121,7 @@ export const partnerMatrix: MatrixGroup[] = [
 
 export const partnerNever = [
   "Member contact lists or directory exports",
-  "Commission on deals — we never take a cut, and never ask for one",
+  "Commission on deals: we never take a cut, and never ask for one",
   "Meetings with members who haven't opted in",
   "Pitches longer than 25 minutes",
 ];
@@ -140,7 +140,7 @@ export const partnerFaq = [
   },
   {
     q: "How is this different from sponsoring the league?",
-    a: "League sponsorship is per city and per season. An annual partnership is a year-round programme of roundtables, advisory boards and insight — and league rights are already included.",
+    a: "League sponsorship is per city and per season. An annual partnership is a year-round programme of roundtables, advisory boards and insight, and league rights are already included.",
   },
   {
     q: "How do you measure results?",
@@ -148,7 +148,7 @@ export const partnerFaq = [
   },
   {
     q: "What does category exclusivity cover?",
-    a: "A Principal Partner is the only partner in its category across CIO Lounge programmes for the year — for example, the only cloud partner.",
+    a: "A Principal Partner is the only partner in its category across CIO Lounge programmes for the year (for example, the only cloud partner).",
   },
   {
     q: "How do we get started?",
