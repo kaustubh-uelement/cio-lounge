@@ -7,7 +7,19 @@ const config: Config = {
     extend: {
       colors: {
         navy: { 950: "#0A1B33", 900: "#102A4C", 800: "#15335B", 700: "#1B3F6E" },
-        brand: { 700: "#17578F", 600: "#1E6BB0", 500: "#2A7BC2", 300: "#7FB0DE", 200: "#B7D2EE", 100: "#DCE9F7", 50: "#EEF4FB" },
+        brand: {
+          950: "#09223A",
+          900: "#0F2D52",
+          800: "#133E6E",
+          700: "#17578F",
+          600: "#1E6BB0",
+          500: "#2A7BC2",
+          400: "#4B96D4",
+          300: "#7FB0DE",
+          200: "#B7D2EE",
+          100: "#DCE9F7",
+          50: "#EEF4FB",
+        },
         paper: "#F6F8FB",
         ink: { DEFAULT: "#43506A", muted: "#5C6880", strong: "#102A4C" },
         line: "#D5E2F0",

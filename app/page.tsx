@@ -419,7 +419,7 @@ export default function HomePage() {
             </div>
 
             {/* Shikha - CXO */}
-            <div className="rounded-3xl bg-gradient-to-br from-brand-900 to-navy-900 p-7 text-brand-100 shadow-xl border border-brand-400/20">
+            <div className="rounded-3xl bg-navy-900 bg-gradient-to-br from-brand-900 via-navy-900 to-navy-950 p-7 text-brand-100 shadow-xl border border-white/10">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <p className="eyebrow-light !text-brand-300">Executive Leadership</p>
                 <span className="rounded-full bg-gold/20 px-2.5 py-0.5 text-xs text-gold">CXO</span>

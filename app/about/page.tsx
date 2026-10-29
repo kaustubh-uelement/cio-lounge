@@ -143,7 +143,7 @@ export default function AboutPage() {
           </div>
 
           {/* Shikha Goel - CXO Profile */}
-          <div className="rounded-3xl border border-brand-200 bg-gradient-to-br from-brand-900 to-navy-900 p-8 sm:p-10 text-white shadow-xl flex flex-col justify-between">
+          <div className="rounded-3xl border border-white/10 bg-navy-900 bg-gradient-to-br from-brand-900 via-navy-900 to-navy-950 p-8 sm:p-10 text-white shadow-xl flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between border-b border-white/10 pb-5">
                 <div>
